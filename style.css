@@ -1,0 +1,84 @@
+body {
+    background-color: #f7e4d4;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    color: #467745;
+}
+
+@media screen and (max-width:520px) {
+    h1 {
+        font-size: 36px;
+        /* balra igazodik */
+    }
+}
+
+input {
+    width: 480px;
+    height: 64px;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #467745;
+    /* max-width: 480px; */
+}
+
+@media screen and (max-width:520px) {
+    input::placeholder {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+}
+
+textarea {
+    width: 480px;
+    height: 120px;
+}
+
+@media screen and (max-width:520px) {
+    textarea {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #467745;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #467745;
+}
+
+@media screen and (max-width: 520px) {
+    p {
+        margin: 0 auto;
+        /* automatikusan kisebb lesz ha kisebb a kepernyo */
+    }
+}
+
+
+
+button {
+    font-family: 'EB Garamond', serif;
+    font-size: 21px;
+    width: 280px;   
+    height: 80px;
+    background-color: #467745;
+    color: #f7e4d4;
+    border: none;
+    text-transform: uppercase;
+}
