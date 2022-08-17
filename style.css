@@ -2,24 +2,31 @@ body {
     background-color: #f7e4d4;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
+    margin-bottom: 30px;
     font-family: 'EB Garamond', serif;
     font-size: 48px;
     color: #467745;
 }
 
-@media screen and (max-width:520px) {
-    h1 {
-        font-size: 36px;
-        /* balra igazodik */
-    }
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    max-width: 520px;
 }
 
 input {
+    margin-bottom: 25px;
     width: 480px;
     height: 64px;
+    border: none;
 }
 
 input::placeholder {
@@ -27,7 +34,57 @@ input::placeholder {
     font-weight: 500;
     font-size: 16px;
     color: #467745;
-    /* max-width: 480px; */
+    padding-left: 20px;
+}
+
+textarea {
+    width: 480px;
+    height: 120px;
+    border: none;
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #467745;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #467745;
+}
+
+.chechbox {
+    width: 480px;
+    height: 30px;
+}
+
+button {
+    font-family: 'EB Garamond', serif;
+    font-size: 21px;
+    width: 280px;   
+    height: 80px;
+    margin-top: 30px;
+    background-color: #467745;
+    color: #f7e4d4;
+    border: none;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:520px) {
+    h1 {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width:520px) {
@@ -37,9 +94,11 @@ input::placeholder {
     }
 }
 
-textarea {
-    width: 480px;
-    height: 120px;
+@media screen and (max-width:520px) {
+    textarea::placeholder {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width:520px) {
@@ -49,36 +108,8 @@ textarea {
     }
 }
 
-textarea::placeholder {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #467745;
-}
-
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #467745;
-}
-
 @media screen and (max-width: 520px) {
-    p {
+    label {
         margin: 0 auto;
-        /* automatikusan kisebb lesz ha kisebb a kepernyo */
     }
-}
-
-
-
-button {
-    font-family: 'EB Garamond', serif;
-    font-size: 21px;
-    width: 280px;   
-    height: 80px;
-    background-color: #467745;
-    color: #f7e4d4;
-    border: none;
-    text-transform: uppercase;
 }
